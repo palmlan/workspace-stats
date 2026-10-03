@@ -1,0 +1,34 @@
+{
+  "name": "@local/dsh-workspace-stats",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shows the session workspace file count and total size under the composer.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "locale/*.json"
+  ],
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "Workspace Stats",
+    "description": "Shows the session workspace file count and total size under the composer."
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

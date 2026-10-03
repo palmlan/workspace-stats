@@ -1,0 +1,7 @@
+# Bundle patch: the rows this package inserts into the profile.
+# One row carries both faces of the package: the Host half (index.js) and,
+# because package.json declares dsh.client, the Client half (client.js).
+- insert:
+    - id: workspace-stats
+      name: '@local/dsh-workspace-stats'
+      config: {}
